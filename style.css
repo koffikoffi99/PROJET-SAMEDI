@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+section nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+section nav .logo img {
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+}
+
+section nav ul {
+    list-style: none;
+}
+
+section nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+section nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    transition: 0.2s linear;
+
+}
+
+section nav ul li a:hover::after {
+    width: 100%;
+}
+
+section nav ul li a:hover {
+    color: #fac031;
+}
+
+section nav .icon i {
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section nav .icon i:hover {
+    color: #fac031;
+}
+
+section .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+
+
+}
+
+section .main .main_text h1 {
+    font-size: 60px;
+    position: relative;
+    top: -90px;
+    left: 20px;
+}
+
+
+section .main .main_text h1 span {
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+    line-height: 22px;
+    font-size: 70px;
+}
+
+
+section .main .main_image img {
+    width: 700px;
+    position: relative;
+    left: 70px;
+}
+
+section p {
+    width: 650px;
+    text-align: justify;
+    position: relative;
+    left: 40px;
+    bottom: 120px;
+    line-height: 22px;
+}
+
+section .main_btn {
+    background: #fac031;
+    position: relative;
+    left: 40px;
+    bottom: 40px;
+    width: 150px;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+
+section .main_btn a {
+    text-decoration: none;
+    color: white;
+    margin-right: 5px;
+}
+
+section .main_btn i {
+    color: white;
+}
+
+.about {
+
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+
+.about .aboutmain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.about .aboutmain .image img {
+    width: 700px;
+    position: relative;
+    top: 60px;
+}
+
+.about .aboutmain .abouttext h1 span {
+    color: #fac031;
+    font-family: mv boli;
+    margin-right: 15px;
+}
+
+.about .aboutmain .abouttext h1 {
+    font-size: 55px;
+    position: relative;
+    bottom: 10px;
+}
+
+.about .aboutmain .abouttext h3 {
+    font-size: 30px;
+    margin: 0 0 20px 0;
+}
+
+.about .aboutmain .abouttext p {
+    text-align: justify;
+    width: 300px;
+    margin-right: 100px;
+    line-height: 22px;
+}
+
+.about .aboubtn {
+    background: #fac031;
+    padding: 12px 25px;
+    text-decoration: none;
+    position: relative;
+    color: white;
+    left: 65%;
+    bottom: 30px;
+}
+
+/*menu*/
+
+.menu {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.menu h1 {
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu h1 span {
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.menu h1 span::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+
+}
+
+.menu .menubox {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.menu .menubox .menucard {
+    width: 325px;
+    height: 480px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu .menubox .menucard .menuimage {
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu .menubox .menucard .menuimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.menu .menubox .menucard .menuimage:hover img {
+    transform: scale(1.1);
+}
+
+.menu .menubox .menucard .smallcard {
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.menu .menubox .menucard:hover .smallcard {
+    position: relative;
+    top: -240px;
+    right: 20px;
+    opacity: 1;
+}
+
+.menu .menubox .menucard .smallcard i {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    color: #000;
+    cursor: pointer;
+    text-shadow: 0 0 6px #000;
+    transition: 0.2s;
+}
+
+.menu .menubox .menucard .smallcard i:hover {
+    color: #fac031;
+}
+
+.menu .menubox .menucard .menuinfo h2 {
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #fac031;
+}
+
+.menu .menubox .menucard .menuinfo p {
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+
+.menu .menubox .menucard .menuinfo h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.menu .menubox .menucard .menuinfo .menuicon {
+    color: #fac031;
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+
+.menu .menubox .menucard .menuinfo .menubtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: #000000;
+    padding: 4px 5px;
+    margin: 0 80px;
+    transition: 0.3s;
+}
